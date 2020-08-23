@@ -1,0 +1,75 @@
+body {
+    font-family: sans-serif;
+    background-image: url(https://xvivo.com/app/uploads/2020/05/COVID19_1920x1200.jpg) ;
+}
+
+.quizContainer {
+    height: 330px;
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: transparent;
+    padding :20px;
+}
+
+.quizTitle {
+    padding-top: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    color:whitesmoke;
+}
+
+.question {
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px white;
+    margin: 10px 0 10px 0;
+    color: #f6f6f6;
+    font-weight: bold;
+}
+.option {
+    width: 470px;
+    display: grid;
+    align-items: stretch;
+    padding: 10px 0 10px 15px;
+    box-shadow: 0 0 8px white;
+    margin: 10px 0 10px 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+}
+ .option:hover {
+     background: purple;
+     color: white;
+ }
+ .nextButton {
+     border: none;
+     outline: none;
+     background: transparent;
+     color: white;
+     box-shadow: 0 0 8px white;
+     width: 100px;
+     height: 35px;
+     border-radius: 20px;
+     cursor: pointer;
+     float: right;
+     margin: 10px;
+ }
+
+ .nextButton:hover {
+     background: purple;
+ }
+ .result {
+     height: 100px;
+     text-align: center;
+     font-size: 75px;
+ }
+ .option input:checked .option{
+     background:cyan;
+     color: black;
+ }
