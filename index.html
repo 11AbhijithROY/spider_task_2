@@ -5,13 +5,27 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="quizContainer">
+    <div class="startscr">
+        <div class="quizTitle">CoronoVirus Quiz</div>
+        <ul>
+            <li>A quiz to test your knowledge about the safety precations and certain facts to remember
+                during this pandemic.
+            </li>
+            <li>No timer in this quiz so that you have all the time</li>
+            <li>Click 'Next' to submit an answer but you can always come 
+                back and choose an other option using the 'Prev' button</li>
+            <li>What are you still doing here? Click 'Start' to start answering!</li>
+        </ul>
+        <button class="startButton" onclick="loadQuiz();">Start</button>
+    </div>
+    <div class="quizContainer" style="display:none">
         <div class="quizTitle">CoronoVirus Quiz</div>
         <div class="question"></div>
         <label class="option"><input type="radio" name="option" value="1"><span class="option1"></span></label>
         <label class="option"><input type="radio" name="option" value="2"><span class="option2"></span></label>
         <label class="option"><input type="radio" name="option" value="3"><span class="option3"></span></label>
         <button class="nextButton" onclick="loadNextQuestion();">Next</button>
+        <button class="prevButton" onclick="loadPrevQuestion();">Prev</button>
     </div>
     <div class="result" style="display:none"></div>
     <script src="questions.js"></script>

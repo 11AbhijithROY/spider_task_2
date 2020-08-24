@@ -6,14 +6,44 @@ body {
   background-size: cover;
 }
 
-.quizContainer {
+.startscr {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 8px white;
     height: 330px;
-    width: 1000px;
+    width: 900px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background: transparent;
+    padding :20px;
+    border-radius: 40px;
+}
+
+.startButton {
+    position: absolute;
+    top: 115%;
+    left: 40%;
+    width: 175px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+ul {
+    width: 30em;
+    font-size: 22px;
+    position: relative;
+    left: 30px;
+    color: white;
+}
+.quizContainer {
+    height: 400px;
+    width: 900px;
+    background-color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     padding :20px;
 }
 
@@ -50,24 +80,30 @@ body {
      background: purple;
      color: white;
  }
-
- .nextButton {
+.option input[type=radio]:checked {
+    background-color: purple;
+}
+ button {
      border: none;
      outline: none;
      background: transparent;
      color: white;
      box-shadow: 0 0 8px white;
-     width: 100px;
-     height: 35px;
+     width: 120px;
+     height: 45px;
+     font-size: 18px;
+     font-weight: bold;
      border-radius: 20px;
      cursor: pointer;
      float: right;
      margin: 10px;
  }
 
- .nextButton:hover {
+ button:hover {
      background: purple;
  }
+
+ 
  .result {
      position: absolute;
      top: 45%;
