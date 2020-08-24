@@ -1,6 +1,9 @@
 body {
     font-family: sans-serif;
-    background-image: url(https://xvivo.com/app/uploads/2020/05/COVID19_1920x1200.jpg) ;
+    background: url(https://xvivo.com/app/uploads/2020/05/COVID19_1366x768.jpg);
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .quizContainer {
@@ -34,9 +37,9 @@ body {
 }
 .option {
     width: 470px;
-    display: grid;
-    align-items: stretch;
-    padding: 10px 0 10px 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
     box-shadow: 0 0 8px white;
     margin: 10px 0 10px 10px;
     color: white;
@@ -47,6 +50,7 @@ body {
      background: purple;
      color: white;
  }
+
  .nextButton {
      border: none;
      outline: none;
@@ -65,11 +69,13 @@ body {
      background: purple;
  }
  .result {
+     position: absolute;
+     top: 45%;
+     left: 45%;
+     box-shadow: 0 0 8px white;
+     padding: 10px 20px;
+     color: white;
      height: 100px;
      text-align: center;
-     font-size: 75px;
- }
- .option input:checked .option{
-     background:cyan;
-     color: black;
+     font-size: 35px;
  }
