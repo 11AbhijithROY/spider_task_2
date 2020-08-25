@@ -2,21 +2,21 @@ body {
     font-family: sans-serif;
     background: url(https://xvivo.com/app/uploads/2020/05/COVID19_1366x768.jpg);
     background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .startscr {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.0);
     box-shadow: 0 0 8px white;
-    height: 330px;
+    height: 360px;
     width: 900px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     padding :20px;
-    border-radius: 40px;
+    border-radius:15px;
 }
 
 .startButton {
@@ -34,12 +34,13 @@ ul {
     font-size: 22px;
     position: relative;
     left: 30px;
+    font-family: 'Raleway', sans-serif;
     color: white;
 }
 .quizContainer {
-    height: 400px;
+    height: 500px;
     width: 900px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.0);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -50,20 +51,21 @@ ul {
 .quizTitle {
     padding-top: 20px;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lemonada', cursive;
     font-size: 50px;
     text-transform: uppercase;
-    color:whitesmoke;
+    color:#ffcccc;
 }
 
 .question {
     padding: 20px;
-    font-size: 22px;
+    font-size: 25px;
     border-radius: 20px;
     box-shadow: 0 0 8px white;
     margin: 10px 0 10px 0;
     color: #f6f6f6;
-    font-weight: bold;
+    font-family: 'Anton', sans-serif;
+    background-color: rgba(146, 41, 179, 0.384);
 }
 .option {
     width: 470px;
@@ -73,11 +75,11 @@ ul {
     box-shadow: 0 0 8px white;
     margin: 10px 0 10px 10px;
     color: white;
-    font-weight: bold;
     border-radius: 20px;
+    font-family: 'Raleway', sans-serif;
 }
  .option:hover {
-     background: purple;
+     background: rgba(146, 41, 179, 0.384);
      color: white;
  }
 .option input[type=radio]:checked {
@@ -100,18 +102,21 @@ ul {
  }
 
  button:hover {
-     background: purple;
+     background: rgba(146, 41, 179, 0.384);
  }
 
  
  .result {
      position: absolute;
+     background: rgba(146, 41, 179, 0.384);
      top: 45%;
-     left: 45%;
-     box-shadow: 0 0 8px white;
+     left: 43%;
+     border-radius: 20px;
      padding: 10px 20px;
      color: white;
-     height: 100px;
+     width: 240px;
+     height: 120px;
      text-align: center;
      font-size: 35px;
+     font-family: 'Anton', sans-serif;
  }
