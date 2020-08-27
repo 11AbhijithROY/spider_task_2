@@ -21,7 +21,7 @@ body {
 
 .startButton {
     position: absolute;
-    top: 115%;
+    top: 120%;
     left: 40%;
     width: 175px;
     height: 60px;
@@ -29,6 +29,24 @@ body {
     font-weight: normal;
 }
 
+.inputname {
+    width: 232px;
+    height: 35px;
+    position: relative;
+    top: 23%;
+    left: 36%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.0);
+    color: white;
+    box-shadow: 0 0 8px white;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding: 7px
+}
+.inputname:hover {
+    background: rgba(146, 41, 179, 0.384);
+}
 ul {
     width: 30em;
     font-size: 22px;
@@ -47,7 +65,21 @@ ul {
     transform: translateX(-50%) translateY(-50%);
     padding :20px;
 }
-
+.timebar {
+    font-family: 'Raleway',sans-serif;
+    background-color: transparent;
+    box-shadow: 0 0 8px white;
+    border-radius: 20px;
+    color: white;
+    width: 120px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 5px 0px 5px;
+    position: absolute;
+    top: 50%;
+    left: -30%;
+}
 .quizTitle {
     padding-top: 20px;
     text-align: center;
@@ -115,7 +147,7 @@ ul {
      padding: 10px 20px;
      color: white;
      width: 240px;
-     height: 120px;
+     height: 160px;
      text-align: center;
      font-size: 35px;
      font-family: 'Anton', sans-serif;
