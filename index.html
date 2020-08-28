@@ -22,13 +22,16 @@
     </div>
     <div class="quizContainer" style="display:none">
         <div class="timebar"></div>
+        <div class="container">
         <div class="quizTitle">CoronoVirus Quiz</div>
         <div class="question"></div>
         <label class="option"><input type="radio" name="option" value="1"><span class="option1"></span></label>
         <label class="option"><input type="radio" name="option" value="2"><span class="option2"></span></label>
         <label class="option"><input type="radio" name="option" value="3"><span class="option3"></span></label>
-        <button class="nextButton" onclick="loadNextQuestion();">Next</button>
-        <button class="prevButton" onclick="loadPrevQuestion();">Prev</button>
+        <button class="nextButton" onclick="submitQuestion();" value="1">Submit</button>
+        <!--<button class="prevButton" onclick="loadPrevQuestion();">Prev</button>
+        -->
+        </div>
     </div>
     <div class="result" style="display:none"></div>
     <script src="questions.js"></script>
