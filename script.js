@@ -52,17 +52,16 @@ function loadQuiz() {
     loadQuestion(currentQuestion);
 }
 function loadQuestion (index) {
-    /*if(index != totQuestions - 1) {
-        nextButton.textContent = "Next";
+    if(index != totQuestions - 1) {
+        nextButton.textContent = "Submit";
     }
-    if(index == 0){
-        prevButton.style.display = "none";
+    var selectedOption = document.querySelector("input[type=radio]:checked");
+    if(selectedOption) {
+        console.log(selectedOption);
+        selectedOption.checked = false;
+        console.log('heyo');
     }
-    else 
-        prevButton.style.display = "";
-    */
     //to load the question and options from questions.js
-    
     currentQuestion = index;
     console.log(currentQuestion);
     if(typeof(index) != "string") {
@@ -70,8 +69,9 @@ function loadQuestion (index) {
         questionEl.textContent = (index + 1) + '. ' + q.question;
     }
     else {
+        index = parseInt(index,10);
         var q = questions[index];
-        questionEl.textContent = (index) + '. ' + q.question;
+        questionEl.textContent = (index + 1) + '. ' + q.question;
     } 
     opt1.textContent = q.option1;
     opt2.textContent = q.option2;
@@ -81,9 +81,9 @@ function loadQuestion (index) {
 function scoring () {
    
     for(let i = 0;i < totQuestions;i++){
-        if(answer[i] == questions[i].answer && score <= 150) {
+            console.log('QNO. ' + (i+1) + 'ANS. ' + answer[i]);
+            if(answer[i] == questions[i].answer && score <= 150) {
             score += 10;
-            
         }
     }
     result.textContent = 'Hey ' + playername + '! Your Score is ' + score + '/150';
@@ -118,7 +118,10 @@ function submitQuestion () {
     }
 
     //selected option is stored in answer array
-    answer[currentQuestion] = selectedOption.value; 
+    answer[currentQuestion] = selectedOption.value;
+    console.log(selectedOption); 
+    let buttons = document.querySelectorAll(".ques_btn")[currentQuestion];
+    buttons.style.backgroundColor = "rgba(146, 41, 179, 0.384)";
     //returned to no selected option for the next question
     selectedOption.checked = false;
     currentQuestion++;
