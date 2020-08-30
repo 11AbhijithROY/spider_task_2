@@ -3,12 +3,18 @@ var score = 0;
 var totQuestions = questions.length;
 var answer = [];
 var seconds = 0;
-var minutes = 5;
+var minutes = 3;
 var starttime;
 //var wrongans = [];
 
 var startscr = document.querySelector(".startscr");
-var playername = document.querySelector(".inputname").value;
+var playername = document.querySelector(".inputname");
+playername.addEventListener('keyup',function(e) {
+    if(e.keyCode == 13){
+        event.preventDefault();
+        document.querySelector(".startButton").click();
+    }
+})
 var container = document.querySelector(".quizContainer");
 var questionEl = document.querySelector(".question");
 var opt1 = document.querySelector(".option1");
@@ -86,7 +92,7 @@ function scoring () {
             score += 10;
         }
     }
-    result.textContent = 'Hey ' + playername + '! Your Score is ' + score + '/150';
+    result.textContent = 'Hey ' + playername.value + '! Your Score is ' + score + '/150';
     result.style.display = "";
 }
 function loadbuttons () {

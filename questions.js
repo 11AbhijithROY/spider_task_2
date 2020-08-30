@@ -1,3 +1,4 @@
+
 var questions = [{
     "question" : "Which date was the first case of Covid-19 reported in India?",
     "option1"  : "31st December 2019",
@@ -102,3 +103,15 @@ var questions = [{
     "option3"  : "Thermal scanners detect people infected with covid-19",
     "answer"   : "1"
 }  ]
+function shufflearray(){
+    var cnt = questions.length, temp, index;
+    while(cnt > 0) {
+        index = Math.floor(Math.random()*cnt);
+        cnt--;
+        temp = questions[cnt];
+        questions[cnt] = questions[index];
+        questions[index] = temp;
+    }
+    console.log(questions);
+}
+shufflearray();
